@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch TODO Task",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/backend/main.go",
+            "envFile": "${workspaceFolder}/.env",
+            "cwd": "${workspaceFolder}/backend",
+            "args": []
+        }
+    ]
+}

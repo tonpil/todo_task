@@ -1,0 +1,8 @@
+*.env
+*.exe
+*.sql.go
+
+build/
+backend/infra/repository/db/*.go
+
+docs/

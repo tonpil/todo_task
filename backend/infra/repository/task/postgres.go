@@ -3,9 +3,9 @@ package task
 import (
 	"context"
 	"errors"
+	entity "ifigurin12/todo/domain/task"
 	"ifigurin12/todo/infra/repository/db"
 	"ifigurin12/todo/infra/repository/private"
-	entity "ifigurin12/todo/interactor/domain/task"
 	"ifigurin12/todo/interactor/iface/repository"
 
 	"github.com/jackc/pgx/v5/pgtype"

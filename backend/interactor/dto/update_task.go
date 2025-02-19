@@ -1,12 +1,12 @@
 package dto
 
-import "ifigurin12/todo/interactor/domain/task"
+import entity "ifigurin12/todo/domain/task"
 
 type UpdateTaskInputDTO struct {
 	ID          int32
 	Title       string
 	Description *string
-	Status      *task.Status
+	Status      *entity.Status
 }
 
 type UpdateTaskOutputDTO struct {

@@ -2,7 +2,7 @@ package repository
 
 import (
 	"context"
-	entity "ifigurin12/todo/interactor/domain/task"
+	entity "ifigurin12/todo/domain/task"
 	"time"
 )
 

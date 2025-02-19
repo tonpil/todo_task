@@ -1,6 +1,6 @@
 package dto
 
-import entity "ifigurin12/todo/interactor/domain/task"
+import entity "ifigurin12/todo/domain/task"
 
 type GetTasksInputDTO struct {
 }

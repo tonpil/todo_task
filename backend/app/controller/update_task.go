@@ -4,8 +4,8 @@ import (
 	"ifigurin12/todo/app/api"
 	"ifigurin12/todo/app/controller/private"
 	"ifigurin12/todo/app/presenter"
+	entity "ifigurin12/todo/domain/task"
 	repository "ifigurin12/todo/infra/repository/task"
-	"ifigurin12/todo/interactor/domain/task"
 	"ifigurin12/todo/interactor/dto"
 	usecase "ifigurin12/todo/interactor/use_case"
 	"strconv"
@@ -36,10 +36,10 @@ func (s *TaskController) UpdateTask(c *fiber.Ctx) error {
 		return c.Status(fiber.StatusBadRequest).JSON(fiber.Map{"error": "Invalid request body"})
 	}
 
-	var statusFromRequest *task.Status
+	var statusFromRequest *entity.Status
 
 	if request.Status != nil {
-		statusFromRequest = task.CreateStatusFromString(*request.Status)
+		statusFromRequest = entity.CreateStatusFromString(*request.Status)
 		if statusFromRequest == nil {
 			return c.Status(fiber.StatusBadRequest).JSON(fiber.Map{"error": "Invalid status from body"})
 		}
